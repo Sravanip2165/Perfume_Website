@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Perfumes</title>
+  <link rel="stylesheet" href="css/women.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="container row">
+    <form class="search" role="search" onsubmit="return false;">
+      <input type="search" placeholder="What are you looking for?">
+    </form>
+    <a class="brand" href="index.php">
+      <img src="images/logo1.png" alt="Logo" onerror="this.style.display='none'">
+       <span class="brand-name">lusent</span>
+    </a>
+    <nav class="actions">
+      <a href="#">Account</a>
+      <a href="#">Cart</a>
+      <a class="pill" href="#">Become a Best Seller</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="container row">
+    <div class="dropdown">
+      <a href="index.php">All Categories ▾</a>
+      <div class="dropdown-menu">
+        <a href="#">Perfumes</a>
+        <a href="#">Deodorants</a>
+        <a href="#">Gift Sets</a>
+        <a href="#">Luxury Scents</a>
+        <a href="#">Travel Size</a>
+      </div>
+    </div>
+    <a href="men.html">Men</a>
+    <a href="women.html" class=>Women</a>
+    <a href="brand.html"class= "active">Brands</a>
+    <a href="offers.html">Offers</a>
+    <a href="new.html">New</a>
+  </div>
+</nav>
+
+<!-- ===== FILTER BAR ===== -->
+<section class="filters container">
+  
+  <div class="dropdown">
+      <button>Categories ▾</button>
+      <div class="dropdown-menu">
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="children.html">Children</a>
+        <a href="allgender.html">All genders</a>
+      </div>
+    </div>
+  <div class="dropdown">
+      <button>Brands ▾</button>
+      <div class="dropdown-menu">
+            <a href="Chanel.html">Chanel</a>
+            <a href="Diorm.html">Dior</a>
+            <a href="Guccim.html">Gucci</a>
+            <a href="Calvinm.html">Calvin Klein</a>
+            <a href="Versacem.html">Versace</a>
+      </div>
+  </div>
+  <div class="dropdown">
+  <button>Price Range ▾</button>
+  <div class="dropdown-menu">
+        <a href="100.html">below ₹100</a>
+        <a href="200.html">₹200 - ₹500</a>
+        <a href="500.html">₹500 - ₹1000</a>
+        <a href="1000.html">₹1000 - ₹2000</a>
+        <a href="2000.html">₹2000 - ₹5000</a>
+        <a href="5000.html">above ₹5000</a>
+      </div>
+    </div>
+       <div class="dropdown">
+  <button>Active Ingredients ▾</button>
+  <div class="dropdown-menu">
+        <a href="citrus.html">Citrus</a>
+        <a href="floral.html">Floral</a>
+        <a href="woody.html">Woody</a>
+        <a href="musk.html">Musk</a>
+        <a href="spicy.html">Spicy</a>
+        <a href="aquatic.html">Fresh & Aquatic</a>
+
+      </div>
+    </div>
+       <div class="dropdown">
+  <button>Benefits ▾</button>
+  <div class="dropdown-menu">
+        <a href="longlasting.html">Long Lasting</a>
+        <a href="freshness.html">Freshness</a>
+        <a href="luxury.html">Luxury Appeal</a>
+        <a href="everyday.html">Everyday Wear</a>
+        <a href="party.html">Party/Evening Wear</a>
+        <a href="travel.html">Travel Friendly</a>
+
+      </div>
+    </div>
+  <div class="dropdown">
+  <button>More filter options ▾</button>
+  <div class="dropdown-menu">
+      <a href="bestsellers.html">Best Sellers</a>
+      <a href="newarrivals.html">New Arrivals</a>
+      <a href="offers.html">On Discount</a>
+      <a href="giftsets.html">Gift Sets</a>
+      <a href="unisex.html">Unisex</a>
+      <a href="eco.html">Eco-Friendly / Natural</a>
+
+      </div>
+  </div>
+       <div class="dropdown">
+  <button class="sort">Sort By ▾</button>
+  <div class="dropdown-menu">
+       <a href="sort_price_low.html">Price: Low to High</a>
+      <a href="sort_price_high.html">Price: High to Low</a>
+      <a href="sort_new.html">Newest First</a>
+      <a href="sort_popular.html">Most Popular</a>
+      <a href="sort_discount.html">Biggest Discounts</a>
+      </div>
+
+      </div>
+      <!-- ===== ACTIVE FILTERS ===== -->
+  <button id="clearFilters">Clear All</button>
+</div>
+
+</section>
+
+<!-- ===== PRODUCT GRID ===== -->
+<section class="products container">
+  <h2>Branded Perfumes for all Gender</h2>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product" data-category="women"
+     data-brand="chanel"
+     data-price="16,750"
+     data-ingredient="floral"
+     data-benefit="luxury"
+     data-extra="newarrivals">
+     <a href="product.html?id=100">
+      <img src="images/coconair.webp" alt="Perfume 1">
+      <h3>CHANEL COCO NOIR Women perfume</h3>
+      </a>
+      <p class="price">₹16,750 <span>₹17,00</span> <b>5% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product" data-category="men"
+     data-brand="louicvitton"
+     data-price="38,000"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="bestsellers">
+     <a href="product.html?id=101">
+      <img src="images/nomade.webp" alt="Perfume 2">
+      <h3>Louis Vuitton Ombre Nomade Perfume</h3>
+      </a>
+      <p class="price">₹38,000 <span>₹39,00</span> <b>10% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Product 3 -->
+    <div class="product" data-category="women"
+     data-brand="chanel"
+     data-price="12,350"
+     data-ingredient="woody"
+     data-benefit="luxury"
+     data-extra="newarrivals">
+     <a href="product.html?id=102">
+      <img src="images/maidmosile.jpg" alt="Perfume 3">
+      <h3>CHANEL COCO MADEMOISELLE women perfume</h3>
+      </a>
+      <p class="price">₹12,350 <span>₹14,500</span> <b>28% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Product 4 -->
+    <div class="product" data-category="men"
+     data-brand="Clive"
+     data-price="43,733"
+     data-ingredient="musk"
+     data-benefit="luxury"
+     data-extra="bestsellers">
+     <a href="product.html?id=103">
+      <img src="images/cliven.webp" alt="Perfume 4">
+      <h3>Clive Christian No. 1 Masculine Parfum</h3>
+      </a>
+      <p class="price">₹43,733 <span>₹43,800</span> <b>4% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="louicvitton"
+     data-price="9000"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=104">
+      <img src="images/LVpacific.webp" alt="Perfume 2">
+      <h3>LOUIS VUITTON Pacific Chill Green. Size 100ml</h3>
+      </a>
+      <p class="price">₹9000 <span>₹9999</span> <b>11% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="dior"
+     data-price="10000"
+     data-ingredient="citrus"
+     data-benefit="freshness"
+     data-extra="newarrivals">
+     <a href="product.html?id=105">
+      <img src="images/diorsa.jpg" alt="Perfume 2">
+      <h3>Vanilla Dreams</h3>
+      </a>
+      <p class="price">₹10000<span>₹10,500</span> <b>4% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="ford"
+     data-price="57,500"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=106">
+      <img src="images/tom ford.webp" alt="Perfume 2">
+      <h3>Tom Ford Tobacco Vanille Eau de Parfum</h3>
+      </a>
+      <p class="price">₹57,500<span>₹58,000</span> <b>10% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="goodgirl"
+     data-price="5640"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=107">
+      <img src="images/goodgirl.webp" alt="Perfume 2">
+      <h3>Carolina Herrera Good Girl Eau De Parfum</h3>
+      </a>
+      <p class="price">₹5,640 <span>₹8,00</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="saint"
+     data-price="2277"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=108">
+      <img src="images/saint.webp" alt="Perfume 2">
+      <h3>Yves Saint Laurent Mon Paris Eau De Parfum</h3>
+      </a>
+      <p class="price">₹2277 <span>₹3000</span> <b>18% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="giorigo"
+     data-price="10543"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=109">
+      <img src="images/giorigo.webp" alt="Perfume 2">
+      <h3>Giorgio Armani Acqua Di Gio Profumo Parfum For Men</h3>
+      </a>
+      <p class="price">₹10,543 <span>₹12,000</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="roja"
+     data-price="4300"
+     data-ingredient="floral"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=110">
+      <img src="images/roja.webp" alt="Perfume 2">
+      <h3>ROJA 51 EDITION SPECIALE 100 mls</h3>
+      </a>
+      <p class="price">₹4300 <span>₹5,000</span> <b>11% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="gucci"
+     data-price="12100"
+     data-ingredient="musk"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=111">
+      <img src="images/gucci.webp" alt="Perfume 2">
+      <h3>Gucci Bloom Eau De Parfum for Women</h3>
+      </a>
+      <p class="price">₹12,100 <span>₹14,000</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" data-category="men"
+     data-brand="afan"
+     data-price="3085"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=112">
+      <img src="images/afan.webp" alt="Perfume 2">
+      <h3>Afnan 9PM For Men</h3>
+      </a>
+      <p class="price">₹3,085 <span>₹3,500</span> <b>18% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product" 
+    data-category="women"
+     data-brand="bellavita"
+     data-price="2056"
+     data-ingredient="floral"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+     <a href="product.html?id=113">
+      <img src="images/bellavite.jpg" alt="Perfume 2">
+      <h3>Vanilla Dreams</h3>
+      </a>
+      <p class="price">₹2056 <span>₹2250</span> <b>9% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/men.js"></script>
+</body>
+</html>

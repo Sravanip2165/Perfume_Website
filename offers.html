@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>offers</title>
+  <link rel="stylesheet" href="css/women.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="container row">
+    <form class="search" role="search" onsubmit="return false;">
+      <input type="search" placeholder="What are you looking for?">
+    </form>
+    <a class="brand" href="index.php">
+      <img src="images/logo1.png" alt="Logo" onerror="this.style.display='none'">
+      <span class="brand-name">lusent</span>
+    </a>
+    <nav class="actions">
+      <a href="#">Account</a>
+      <a href="#">Cart</a>
+      <a class="pill" href="#">Become a Best Seller</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="container row">
+    <div class="dropdown">
+      <a href="index.php">All Categories ▾</a>
+      <div class="dropdown-menu">
+        <a href="#">Perfumes</a>
+        <a href="#">Deodorants</a>
+        <a href="#">Gift Sets</a>
+        <a href="#">Luxury Scents</a>
+        <a href="#">Travel Size</a>
+      </div>
+    </div>
+    <a href="men.html">Men</a>
+    <a href="women.html">Women</a>
+    <a href="brand.html">Brands</a>
+    <a href="offers.html" class="active">Offers</a>
+    <a href="new.html">New</a>
+  </div>
+</nav>
+
+<!-- ===== FILTER BAR ===== -->
+<section class="filters container">
+  
+  <div class="dropdown">
+      <button>Categories ▾</button>
+      <div class="dropdown-menu">
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="children.html">Children</a>
+        <a href="allgender.html">All genders</a>
+      </div>
+    </div>
+  <div class="dropdown">
+      <button>Brands ▾</button>
+      <div class="dropdown-menu">
+            <a href="Chanel.html">Chanel</a>
+            <a href="Diorm.html">Dior</a>
+            <a href="Guccim.html">Gucci</a>
+            <a href="Calvinm.html">Calvin Klein</a>
+            <a href="Versacem.html">Versace</a>
+      </div>
+  </div>
+  <div class="dropdown">
+  <button>Price Range ▾</button>
+  <div class="dropdown-menu">
+        <a href="100.html">below ₹100</a>
+        <a href="200.html">₹200 - ₹500</a>
+        <a href="500.html">₹500 - ₹1000</a>
+        <a href="1000.html">₹1000 - ₹2000</a>
+        <a href="2000.html">₹2000 - ₹5000</a>
+        <a href="5000.html">above ₹5000</a>
+      </div>
+    </div>
+       <div class="dropdown">
+  <button>Active Ingredients ▾</button>
+  <div class="dropdown-menu">
+        <a href="citrus.html">Citrus</a>
+        <a href="floral.html">Floral</a>
+        <a href="woody.html">Woody</a>
+        <a href="musk.html">Musk</a>
+        <a href="spicy.html">Spicy</a>
+        <a href="aquatic.html">Fresh & Aquatic</a>
+
+      </div>
+    </div>
+       <div class="dropdown">
+  <button>Benefits ▾</button>
+  <div class="dropdown-menu">
+        <a href="longlasting.html">Long Lasting</a>
+        <a href="freshness.html">Freshness</a>
+        <a href="luxury.html">Luxury Appeal</a>
+        <a href="everyday.html">Everyday Wear</a>
+        <a href="party.html">Party/Evening Wear</a>
+        <a href="travel.html">Travel Friendly</a>
+
+      </div>
+    </div>
+  <div class="dropdown">
+  <button>More filter options ▾</button>
+  <div class="dropdown-menu">
+      <a href="bestsellers.html">Best Sellers</a>
+      <a href="newarrivals.html">New Arrivals</a>
+      <a href="offers.html">On Discount</a>
+      <a href="giftsets.html">Gift Sets</a>
+      <a href="unisex.html">Unisex</a>
+      <a href="eco.html">Eco-Friendly / Natural</a>
+
+      </div>
+  </div>
+       <div class="dropdown">
+  <button class="sort">Sort By ▾</button>
+  <div class="dropdown-menu">
+       <a href="sort_price_low.html">Price: Low to High</a>
+      <a href="sort_price_high.html">Price: High to Low</a>
+      <a href="sort_new.html">Newest First</a>
+      <a href="sort_popular.html">Most Popular</a>
+      <a href="sort_discount.html">Biggest Discounts</a>
+      </div>
+
+      </div>
+      <!-- ===== ACTIVE FILTERS ===== -->
+  <button id="clearFilters">Clear All</button>
+</div>
+
+</section>
+
+<!-- ===== PRODUCT GRID ===== -->
+<section class="products container">
+  <h2>Some crushes don’t last… but these offers will leave a lasting impression</h2>
+  <div class="product-grid">
+    <!-- Product 1 -->
+
+    <div class="product" 
+    data-category="men"
+     data-brand="plum"
+     data-price="259"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <a href="product.html?id=50">
+      <img src="images/palm.jpg" alt="Perfume 1">
+      <h3>Plum  BodyLovin' Vanilla Caramello | long lasting and permium warm vanilla Fragrance</h3>
+      </a>
+      <p class="price">₹340 <span>₹510</span> <b>50% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product"
+    data-category="men"
+     data-brand="denver"
+     data-price="299"
+     data-ingredient="floral"
+     data-benefit="longlasting"
+     data-extra="bestsellers">
+    <a href="product.html?id=1">
+      <img src="images/denverhamil.jpg" alt="Perfume 1">
+      <h3>Elegant Rose Eau de Parfum</h3>
+    </a>
+      <p class="price">₹299 <span>₹399</span> <b>30% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+   
+    <!-- Product 2 -->
+   <div class="product" data-category="women"
+     data-brand="plum"
+     data-price="352"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+        <a href="product.html?id=58">
+      <img src="images/plum tulips.avif" alt="Perfume 4">
+      <h3>PLUM BodyLovin' Tulips Dont't Lie | Long Lasting Fragrance</h3>
+      </a>
+      <p class="price">₹352 <span>₹399</span> <b>19% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+   
+    <div class="product" 
+    data-category="men"
+     data-brand="dior"
+     data-price="254"
+     data-ingredient="musk"
+     data-benefit="freshness"
+     data-extra="bestsellers">
+
+    <a href="product.html?id=2">
+      <img src="images/diorsa.jpg" alt="Perfume 2">
+      <h3>Dior Sauvage</h3>
+    </a>
+      <p class="price">₹254 <span>₹295</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+   <div class="product" data-category="men"
+     data-brand="bellavita"
+     data-price="765"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <a href="product.html?id=52">
+      <img src="images/hotmess.jpg" alt="Perfume 3">
+      <h3>BELLAVITA Luxury Hot Mess Perfume for Women</h3>
+      </a>
+      <p class="price">₹765 <span>₹1099</span> <b>28% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Product 4 -->
+   <div class="product" data-category="men"
+     data-brand="skinn"
+     data-price="1,516"
+     data-ingredient="floral"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <a href="product.html?id=51">
+      <img src="images/skinn.jpg" alt="Perfume 2">
+      <h3>Skinn by Titan Sheer prefume for women| Luxury Perfume or all occations </h3>
+    </a>
+      <p class="price">₹1,516 <span>₹1,895</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+   
+
+    <div class="product" data-category="men"
+     data-brand="axe"
+     data-price="259"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <a href="product.html?id=53">
+      <img src="images/envy.jpg" alt="Perfume 4">
+      <h3>ENVY Natural Spary Women Perfume-60ML | Long Lasting Fragrance</h3>
+      </a>
+      <p class="price">₹228 <span>₹280</span> <b>29% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    
+    <div class="product" data-category="men"
+     data-brand="axe"
+     data-price="259"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+        <a href="product.html?id=8">
+          <img src="images/axe.jpg" alt="Perfume 4">
+          <h3>BellaVita Luxury Skai Aquatic Men Perfume  -100ML | LongLasting Fragrance</h3>
+          </a>
+          <p class="price">₹259 <span>₹450</span> <b>29% off</b></p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+ <div class="product" data-category="men"
+     data-brand="envy"
+     data-price="216"
+     data-ingredient="citrus"
+     data-benefit="freshness"
+     data-extra="bestsellers">
+      <a href="product.html?id=7">
+        <img src="images/envy.png" alt="Perfume 4">
+        <h3>ENVY Men Natural Spary | LongLasting Fragrance</h3>
+        </a>
+        <p class="price">₹216 <span>₹450</span> <b>48% off</b></p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product" data-category="men"
+     data-brand="denver"
+     data-price="499"
+     data-ingredient="floral"
+     data-benefit="longlasting"
+     data-extra="bestsellers">
+      <a href="product.html?id=4">
+      <img src="images/denver.jpg" alt="Perfume 3">
+      <h3>Luxury Oud Scent</h3>
+      </a>
+      <p class="price">₹499 <span>₹699</span> <b>28% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+   <div class="product" data-category="men"
+     data-brand="denver"
+     data-price="259"
+     data-ingredient="citrus"
+     data-benefit="longlasting"
+     data-extra="bestsellers">
+        <a href="product.html?id=9">
+          <img src="images/den.jpg" alt="Perfume 4">
+          <h3>BellaVita Luxury Skai Aquatic Men Perfume  -100ML | LongLasting Fragrance</h3>
+          </a>
+          <p class="price">₹259 <span>₹450</span> <b>49% off</b></p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+    <div class="product" data-category="men"
+     data-brand="giorigo"
+     data-price="10543"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <img src="images/giorigo.webp" alt="Perfume 2">
+      <h3>Giorgio Armani Acqua Di Gio Profumo Parfum For Men</h3>
+      <p class="price">₹10,543 <span>₹12,000</span> <b>29% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product" data-category="men"
+     data-brand="roja"
+     data-price="4300"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <img src="images/roja.webp" alt="Perfume 2">
+      <h3>ROJA 51 EDITION SPECIALE 100 mls</h3>
+      <p class="price">₹4300 <span>₹295</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+     <div class="product" data-category="women"
+     data-brand="skinn"
+     data-price="689"
+     data-ingredient="floral"
+     data-benefit="everyday"
+     data-extra="bestsellers">
+        <a href="product.html?id=57">
+      <img src="images/tales.webp" alt="Perfume 4">
+      <h3>Skinn Tales Vanilla Women Perfume</h3>
+      </a>
+      <p class="price">₹689 <span>₹800</span> <b>29% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+    <div class="product" data-category="men"
+     data-brand="signature"
+     data-price="450"
+     data-ingredient="woody"
+     data-benefit="longlasting"
+     data-extra="bestsellers">
+        <a href="product.html?id=11">
+          <img src="images/signature.jpg" alt="Perfume 4">
+          <h3>BellaVita Luxury Skai Aquatic Men Perfume  -100ML | LongLasting Fragrance</h3>
+          </a>
+          <p class="price">₹450 <span>₹550</span> <b>29% off</b></p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+    <div class="product" data-category="men"
+     data-brand="afan"
+     data-price="3085"
+     data-ingredient="woody"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+      <img src="images/afan.webp" alt="Perfume 2">
+      <h3>Afnan 9PM For Men</h3>
+      <p class="price">₹3,085 <span>₹3,500</span> <b>14% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="product" data-category="women"
+     data-brand="Wottagirl"
+     data-price="228"
+     data-ingredient="freshness"
+     data-benefit="everyday"
+     data-extra="newarrivals">
+        <a href="product.html?id=59">
+      <img src="images/WaMi.webp" alt="Perfume 4">
+      <h3>Layer'r Wottagirl Mystic Island Fragrance for Women</h3>
+      </a>
+      <p class="price">₹228 <span>₹280</span> <b>29% off</b></p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    
+  </div>
+</section>
+
+<script src="js/men.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+:root {
+  --accent: #6a1bb2;
+  --text: #222;
+  --line: #e9e3f3;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+.container { max-width: 1280px; margin: auto; padding: 0 20px; }
+.row { display: flex; align-items: center; }
+
+/* ===== TOP BAR ===== */
+.topbar { border-bottom: 1px solid var(--line); background: #fff; }
+.topbar .row { justify-content: space-between; padding: 12px 0; gap: 16px; }
+.search { flex: 1; max-width: 420px; display: flex; }
+.search input {
+  width: 100%; padding: 10px 14px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 14px; outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6a1bb21a; }
+.brand { flex: 1; display: flex; justify-content: center; font-weight: 700; font-size: 24px; color: var(--accent); }
+.brand img { width: 40px; height: 40px; }
+.actions { flex: 1; justify-content: flex-end; display: flex; gap: 20px; }
+.pill { border: 1px solid var(--accent); color: var(--accent); padding: 8px 12px; border-radius: 999px; }
+
+/* ===== NAV ===== */
+.nav { border-bottom: 1px solid var(--line); background: #fff; }
+.nav .row { justify-content: center; gap: 34px; padding: 14px 0; font-weight: 700; }
+.nav a { text-decoration: none; color: var(--text); }
+.nav a.active, .nav a:hover { color: var(--accent); }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-menu {
+  display: none; position: absolute; top: 100%; left: 0; background: #fff;
+  border: 1px solid var(--line); border-radius: 6px; min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); z-index: 100;
+}
+.dropdown-menu a {
+  display: block; padding: 10px 14px; font-weight: 500; font-size: 14px;
+  color: var(--text); text-decoration: none;
+}
+.dropdown-menu a:hover { background: #f7f3ff; color: var(--accent); }
+.dropdown:hover .dropdown-menu { display: block; }
+
+/* ===== FILTER BAR ===== */
+.filters {
+  display: flex; gap: 12px; padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.filters button {
+  background: #fff; border: 1px solid var(--line);
+  padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 14px;
+}
+.filters .sort { margin-left: auto; }
+
+/* ===== PRODUCT GRID ===== */
+.products { padding: 24px 0; }
+.products h2 { margin-bottom: 20px; }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.product {
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;               /* ✅ Flexbox for vertical alignment */
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: 0.3s ease;
+  position: relative;
+  min-height: 380px;           /* ✅ Equal height cards */
+}
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;         /* ✅ Prevents cropping */
+}
+.product h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  flex-grow: 1;                /* ✅ Ensures text doesn’t break layout */
+}
+.price {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 8px 0;
+}
+.price span { color: #888; text-decoration: line-through; font-weight: 400; }
+.price b { color: green; font-weight: 600; }
+.add-to-cart {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: auto;           /* ✅ Always at bottom */
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+/* Hover effect */
+.add-to-cart:hover {
+  background: #4a0f80;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+.product:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between logo and text */
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive; /* Calligraphy font */
+  font-size: 42px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand-name:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,249 @@
+:root {
+  --accent: #6a1bb2;
+  --text: #222;
+  --line: #e9e3f3;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+.container { max-width: 1280px; margin: auto; padding: 0 20px; }
+
+/* ===== TOP BAR ===== */
+.topbar { border-bottom: 1px solid var(--line); background: #fff; }
+.topbar .row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0;
+}
+.search { flex: 1 1 33%; max-width: 420px; display: flex; align-items: center; }
+.search input {
+  width: 100%; padding: 10px 14px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 14px; outline: none;
+}
+.search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6a1bb21a; }
+.brand {
+  flex: 1 1 34%; display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-weight: 700; font-size: 24px; color: var(--accent); text-transform: lowercase;
+}
+.brand img { width: 40px; height: 40px; object-fit: contain; }
+.actions { flex: 1 1 33%; display: flex; justify-content: flex-end; gap: 20px; }
+.actions a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 14px; }
+.actions a i { margin-right: 6px; }
+.pill {
+  border: 1px solid var(--accent); color: var(--accent);
+  padding: 8px 12px; border-radius: 999px; font-weight: 600;
+}
+
+/* ===== NAV ===== */
+.nav { border-bottom: 1px solid var(--line); background: #fff; }
+.nav .row {
+  display: flex; gap: 34px; align-items: center; justify-content: center;
+  padding: 14px 0; font-weight: 700; font-size: 15px;
+}
+.nav a { color: #000; text-decoration: none; position: relative; }
+.nav a:hover { color: var(--accent); }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-menu {
+  display: none; position: absolute; top: 100%; left: 0; background: #fff;
+  border: 1px solid var(--line); border-radius: 6px; min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); z-index: 100;
+}
+.dropdown-menu a {
+  display: block; padding: 10px 14px; font-weight: 500; font-size: 14px;
+  color: var(--text); text-decoration: none;
+}
+.dropdown-menu a:hover { background: #f7f3ff; color: var(--accent); }
+.dropdown:hover .dropdown-menu { display: block; }
+
+/* ===== CAROUSEL ===== */
+.carousel {
+  position: relative; overflow: hidden; background: #faf7ff;
+}
+.carousel .track {
+  display: flex; transition: transform 0.6s ease;
+}
+.slide {
+  min-width: 100%; height: 460px;
+}
+.slide img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+/* Arrows */
+.arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.8); border: none; padding: 10px 14px;
+  cursor: pointer; border-radius: 50%; font-size: 18px; color: var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); z-index: 50;
+}
+.arrow:hover { background: #fff; }
+.arrow.left { left: 15px; }
+.arrow.right { right: 15px; }
+/* Dots */
+.dots {
+  position: absolute; left: 0; right: 0; bottom: 14px;
+  display: flex; justify-content: center; gap: 8px;
+}
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #c9b6ea; opacity: 0.8;
+}
+.dot.active { background: var(--accent); }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .brand { font-size: 20px; }
+  .slide { height: 360px; }
+}
+@media (max-width: 640px) {
+  .row { gap: 10px; flex-wrap: wrap; }
+  .actions { gap: 12px; }
+  .pill { display: none; }
+  .slide { height: 260px; }
+}
+/* ===== FEATURED CATEGORIES ===== */
+.featured-categories {
+  background: #faf7ff;
+  padding: 60px 20px;
+}
+.featured-categories h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.featured-categories .row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== FRAGRANCE QUIZ ===== */
+.fragrance-quiz {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.fragrance-quiz h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.fragrance-quiz p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 24px;
+}
+.fragrance-quiz .btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.fragrance-quiz .btn:hover {
+  background: #4e1391;
+}
+
+/* ===== Responsive Cards ===== */
+@media (max-width: 900px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 640px) {
+  .card {
+    width: 100%;
+  }
+}
+
+
+
+/* ===== Account Dropdown ===== */
+.account-dropdown {
+  position: relative;
+}
+.account-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+.account-dropdown .dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+.account-dropdown .dropdown-menu a:hover {
+  background: #f7f3ff;
+  color: var(--accent);
+}
+.account-dropdown:hover .dropdown-menu {
+  display: block;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between logo and text */
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive; /* Calligraphy font */
+  font-size: 42px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand-name:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}

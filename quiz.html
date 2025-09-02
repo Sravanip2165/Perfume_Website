@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find Your Fragrance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #d88fbf;
+      --text: #333;
+      --line: #f3d9e5;
+      --bg: #fff0f5;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      padding: 40px;
+      color: var(--text);
+    }
+    h1 {
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .quiz-box {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #c070a9;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🌸 Find Your Perfect Fragrance</h1>
+<div class="quiz-box">
+  <div class="question">
+    <label for="mood">What's your current mood?</label>
+    <select id="mood">
+      <option value="romantic">Romantic</option>
+      <option value="fresh">Fresh & Energetic</option>
+      <option value="calm">Calm & Relaxed</option>
+      <option value="bold">Bold & Confident</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="occasion">What's the occasion?</label>
+    <select id="occasion">
+      <option value="date">Date Night</option>
+      <option value="daily">Daily Wear</option>
+      <option value="party">Party</option>
+      <option value="rainy">Rainy Day</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="note">Which scent note do you prefer?</label>
+    <select id="note">
+      <option value="floral">Floral</option>
+      <option value="citrus">Citrus</option>
+      <option value="woody">Woody</option>
+      <option value="spicy">Spicy</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="season">Which season do you love most?</label>
+    <select id="season">
+      <option value="spring">Spring</option>
+      <option value="monsoon">Monsoon</option>
+      <option value="winter">Winter</option>
+      <option value="summer">Summer</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="personality">How would you describe your personality?</label>
+    <select id="personality">
+      <option value="gentle">Gentle & Kind</option>
+      <option value="adventurous">Adventurous</option>
+      <option value="mysterious">Mysterious</option>
+      <option value="cheerful">Cheerful & Bright</option>
+    </select>
+  </div>
+
+  <div class="question">
+    <label for="time">When do you usually wear perfume?</label>
+    <select id="time">
+      <option value="morning">Morning</option>
+      <option value="evening">Evening</option>
+      <option value="special">Only on special occasions</option>
+      <option value="always">Always!</option>
+    </select>
+  </div>
+
+  <button onclick="showResult()">Get My Recommendation</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function showResult() {
+    const mood = document.getElementById("mood").value;
+    const occasion = document.getElementById("occasion").value;
+    const note = document.getElementById("note").value;
+    const season = document.getElementById("season").value;
+    const personality = document.getElementById("personality").value;
+    const time = document.getElementById("time").value;
+
+    let recommendation = "";
+
+    if (occasion === "date" && mood === "romantic" && note === "floral") {
+      recommendation = "💖 You’ll love our Date Night Favorites like Velvet Kiss and Midnight Rose.";
+    } else if (season === "monsoon" || occasion === "rainy") {
+      recommendation = "🌧️ Explore Rainy Scents like Fresh Mist and Rain Bloom.";
+    } else if (note === "citrus" && personality === "cheerful") {
+      recommendation = "🍋 Try our Citrus Splash Collection for a bright, happy vibe.";
+    } else if (note === "woody" || personality === "mysterious") {
+      recommendation = "🌲 Discover our Bold & Woody Scents like Amber Glow and Forest Noir.";
+    } else if (time === "morning" && note === "fresh") {
+      recommendation = "🌞 Start your day with Fresh Energy scents like Lemon Zest and Ocean Breeze.";
+    } else {
+      recommendation = "🌸 Try our Everyday Floral Picks for a soft, elegant touch.";
+    }
+
+    document.getElementById("result").innerText = recommendation;
+  }
+</script>
+
+</body>
+</html>
