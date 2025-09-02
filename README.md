@@ -92,7 +92,7 @@ Click Logout to end the session and return to the login page
 ![Men page](screenshots/menpage.png)
 
 ### Filters on Brands Category
-![Filters Applied](screenshots/filter_details.png)
+![Filters Applied](screenshots/filters_applied.png)
 
 ### Product Details
 ![Product page](screenshots/product_details.png)
